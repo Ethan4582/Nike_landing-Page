@@ -2,7 +2,7 @@ import { Hero, CustomerReview, Footer,  PopularProduct, Services, SpecialOffer, 
 import Nav from "./components/Nav"
 
 const App= ()=>(
-  <main className="relative bg-mycolor">
+  <main className="relative bg-white">
     <Nav/>
     <section className="xl:padding-1 wide:padding-r padding-b">
       <Hero/>
