@@ -1,30 +1,17 @@
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
-  const handleClick = () => {
-    if (bigShoeImg !== imgURL.bigShoe) {
-      changeBigShoeImage(imgURL.bigShoe);
-    }
-  };
-
+const ServiceCard = ({ imgURL, label, subtext }) => {
   return (
-    <div
-      className={`border-2 rounded-xl ${
-        bigShoeImg === imgURL.bigShoe
-          ? "border-coral-red"
-          : "border-transparent"
-      } cursor-pointer max-sm:flex-1`}
-      onClick={handleClick}
-    >
-      <div className='flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4'>
-        <img
-          src={imgURL.thumbnail}
-          alt='shoe colletion'
-          width={127}
-          height={103.34}
-          className='object-contain'
-        />
+    <div className='flex-1 sm:w-[350px] sm:min-w-[350px] w-full rounded-[20px] shadow-3xl px-10 py-16'>
+      <div className='w-11 h-11 flex justify-center items-center bg-coral-red rounded-full'>
+        <img src={imgURL} alt={label} width={24} height={24} />
       </div>
+      <h3 className='mt-5 font-palanquin text-3xl leading-normal font-bold'>
+        {label}
+      </h3>
+      <p className='mt-3 break-words font-montserrat text-lg leading-normal text-slate-gray'>
+        {subtext}
+      </p>
     </div>
   );
 };
 
-export default ShoeCard;
+export default ServiceCard;
