@@ -1,34 +1,45 @@
-import { Hero, CustomerReview, Footer,  PopularProduct, Services, SpecialOffer, Subscribe,  SuperQuality } from './sections'
-import Nav from "./components/Nav"
+import { Nav } from "./components";
+import {
+  CustomerReviews,
+  Footer,
+  Hero,
+  PopularProducts,
+  Services,
+  SpecialOffer,
+  Subscribe,
+  SuperQuality,
+} from "./sections";
 
-const App= ()=>(
-  <main className="relative bg-white">
-    <Nav/>
-    <section className="xl:padding-1 wide:padding-r padding-b">
-      <Hero/>
-      <section className="padding"> 
-        <PopularProduct/>
+const App = () => {
+  return (
+    <main className='relative'>
+      <Nav />
+      <section className='xl:padding-l wide:padding-r padding-b'>
+        <Hero />
       </section>
-      <section className="padding"> 
-        <SuperQuality/>
+      <section className='padding'>
+        <PopularProducts />
       </section>
-      <section className="padding-x py-10"> 
-        <Services/>
+      <section className='padding'>
+        <SuperQuality />
       </section>
-      <section className="padding"> 
-        <SpecialOffer/>
+      <section className='padding-x py-10'>
+        <Services />
       </section>
-      <section className="bg-pale-blue padding "> 
-        <CustomerReview/>
+      <section className='padding'>
+        <SpecialOffer />
       </section>
-      <section className="padding-x sm:py-32 py-16 w-full"> 
-       <Subscribe/>
+      <section className='bg-pale-blue padding'>
+        <CustomerReviews />
       </section>
-      <section className=" bg-black padding-x padding-t pb-8"> 
-        <Footer/>
+      <section className='padding-x sm:py-32 py-16 w-full'>
+        <Subscribe />
       </section>
-    </section>
-  </main>
-)
+      <section className=' bg-black padding-x padding-t pb-8'>
+        <Footer />
+      </section>
+    </main>
+  );
+};
 
 export default App;
